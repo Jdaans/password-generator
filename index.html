@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+
+    <main class="container">
+        <div class="password-box">
+            <p id="password-output"></p>
+            <button id="copy-button" aria-label="Copy to clipboard">
+                <img src="/icon-copy.svg" alt="copy to clipboard image">
+            </button>
+        </div>
+
+        <div class="password-generator">
+            <div class="character-length">
+                <label for="length-slider">Character Length</label>
+                <input type="range" min="4" max="15" value="4">
+                <span id="length-value"></span>
+            </div>
+
+            <form>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="uppercase" id="upper-case">
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="lowercase" id="lower-case">
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="numbers" id="numbers">
+                </label>
+                <label class="checkbox-option">
+                    <input type="checkbox" name="symbols" id="symbols">
+                </label>
+            </form>
+
+            <div class="strength-meter">
+                <span class="label">STRENGTH</span>
+                <span class="strength-value">MEDIUM</span>
+                <div class="strength-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <button id="generate-button">Generate</button>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
